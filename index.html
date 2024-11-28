@@ -19,14 +19,9 @@
                 <span>Click me!</span>
                 🎄
             </div>
-            <video loop autoplay playsinline muted preload="auto">
+            <video class="video" loop autoplay playsinline muted preload="auto">
                 <source src="./assets/video.mp4" type="video/mp4" />
             </video>
-            <!-- <iframe
-                src="./assets/silence.mp3"
-                allow="autoplay"
-                id="audio"
-            ></iframe> -->
             <audio id="player" controls loop>
                 <source src="./assets/audio.mp3" type="audio/mp3" />
             </audio>
@@ -41,33 +36,151 @@
                 love!
             </p>
             <div class="calendar">
-                <div id="day-1" class="card active">
-                    <span>Day 1</span>
-                    <span>Some default text that can be in this card</span>
+                <div id="day-1" data-day="1" class="card disabled">
+                    <span class="card__title">Day 1</span>
+                    <div class="card__present">
+                        <img src="assets/joy.png" alt="" />
+                    </div>
                 </div>
-                <div id="day-2" class="card"><span>Day 2</span></div>
-                <div id="day-3" class="card"><span>Day 3</span></div>
-                <div id="day-4" class="card"><span>Day 4</span></div>
-                <div id="day-5" class="card"><span>Day 5</span></div>
-                <div id="day-6" class="card"><span>Day 6</span></div>
-                <div id="day-7" class="card"><span>Day 7</span></div>
-                <div id="day-8" class="card"><span>Day 8</span></div>
-                <div id="day-9" class="card"><span>Day 9</span></div>
-                <div id="day-10" class="card"><span>Day 10</span></div>
-                <div id="day-11" class="card"><span>Day 11</span></div>
-                <div id="day-12" class="card"><span>Day 12</span></div>
-                <div id="day-13" class="card"><span>Day 13</span></div>
-                <div id="day-14" class="card"><span>Day 14</span></div>
-                <div id="day-15" class="card"><span>Day 15</span></div>
-                <div id="day-16" class="card"><span>Day 16</span></div>
-                <div id="day-17" class="card"><span>Day 17</span></div>
-                <div id="day-18" class="card"><span>Day 18</span></div>
-                <div id="day-19" class="card"><span>Day 19</span></div>
-                <div id="day-20" class="card"><span>Day 20</span></div>
-                <div id="day-21" class="card"><span>Day 21</span></div>
-                <div id="day-22" class="card"><span>Day 22</span></div>
-                <div id="day-23" class="card"><span>Day 23</span></div>
-                <div id="day-24" class="card"><span>Day 24</span></div>
+                <div id="day-2" data-day="2" class="card disabled">
+                    <span class="card__title">Day 2</span>
+                    <div class="card__present">
+                        <img src="assets/socks.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-3" data-day="3" class="card disabled">
+                    <span class="card__title">Day 3</span>
+                    <div class="card__present">
+                        <img src="assets/santa.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-4" data-day="4" class="card disabled">
+                    <span class="card__title">Day 4</span>
+                    <div class="card__present">
+                        <img src="assets/back.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-5" data-day="5" class="card disabled">
+                    <span class="card__title">Day 5</span>
+                    <div class="card__present">
+                        <img src="assets/maxi.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-6" data-day="6" class="card disabled">
+                    <span class="card__title">Day 6</span>
+                    <div class="card__present">
+                        <img src="assets/coffee.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-7" data-day="7" class="card disabled">
+                    <span class="card__title">Day 7</span>
+                    <div class="card__present">
+                        <img src="assets/help.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-8" data-day="8" class="card disabled">
+                    <span class="card__title">Day 8</span>
+                    <div class="card__present">
+                        <img src="assets/carbonara.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-9" data-day="9" class="card disabled">
+                    <span class="card__title">Day 9</span>
+                    <div class="card__present">
+                        <img src="assets/mask.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-10" data-day="10" class="card disabled">
+                    <span class="card__title">Day 10</span>
+                    <div class="card__present">
+                        <img src="assets/milka.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-11" data-day="11" class="card disabled">
+                    <span class="card__title">Day 11</span>
+                    <div class="card__present">
+                        <img src="assets/bueno.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-12" data-day="12" class="card disabled">
+                    <span class="card__title">Day 12</span>
+                    <div class="card__present">
+                        <img src="assets/breakfast.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-13" data-day="13" class="card disabled">
+                    <span class="card__title">Day 13</span>
+                    <div class="card__present">
+                        <img src="assets/foot.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-14" data-day="14" class="card disabled">
+                    <span class="card__title">Day 14</span>
+                    <div class="card__present">
+                        <img src="assets/surprise-santa.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-15" data-day="15" class="card disabled">
+                    <span class="card__title">Day 15</span>
+                    <div class="card__present">
+                        <img src="assets/toy.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-16" data-day="16" class="card disabled">
+                    <span class="card__title">Day 16</span>
+                    <div class="card__present">
+                        <img src="assets/book.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-17" data-day="17" class="card disabled">
+                    <span class="card__title">Day 17</span>
+                    <div class="card__present">
+                        <img src="assets/cookies.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-18" data-day="18" class="card disabled">
+                    <span class="card__title">Day 18</span>
+                    <div class="card__present">
+                        <img src="assets/film.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-19" data-day="19" class="card disabled">
+                    <span class="card__title">Day 19</span>
+                    <div class="card__present">
+                        <img src="assets/toy.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-20" data-day="20" class="card disabled">
+                    <span class="card__title">Day 20</span>
+                    <div class="card__present">
+                        <img src="assets/dessert.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-21" data-day="21" class="card disabled">
+                    <span class="card__title">Day 21</span>
+                    <div class="card__present">
+                        <img src="assets/matcha.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-22" data-day="22" class="card disabled">
+                    <span class="card__title">Day 22</span>
+                    <div class="card__present">
+                        <img src="assets/mask.png" alt="" />
+                    </div>
+                </div>
+                <div id="day-23" data-day="23" class="card disabled">
+                    <span class="card__title">Day 23</span>
+                    <div class="card__present">
+                        <img src="assets/cacao.png" alt="" />
+                    </div>
+                    >
+                </div>
+                <div id="day-24" data-day="24" class="card disabled">
+                    <span class="card__title">Day 24</span>
+                    <div class="card__present">
+                        <img src="assets/candle.png" alt="" />
+                    </div>
+                </div>
             </div>
         </div>
     </body>
@@ -81,6 +194,25 @@
             setTimeout(() => {
                 preview.style.display = "none"
             }, 1000)
+        })
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card")
+            const today = new Date()
+            let currentDay = today.getDate()
+            const currentMonth = today.getMonth()
+
+            if (currentMonth === 11) {
+                cards.forEach((card) => {
+                    const cardDay = parseInt(card.getAttribute("data-day"), 10)
+                    if (cardDay <= currentDay) {
+                        card.classList.remove("disabled")
+                        card.addEventListener("click", () => {
+                            card.classList.toggle("active")
+                        })
+                    }
+                })
+            }
         })
     </script>
 </html>
